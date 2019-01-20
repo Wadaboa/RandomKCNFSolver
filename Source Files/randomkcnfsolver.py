@@ -62,7 +62,7 @@ def plot(loops, tries, k, max_m_value, max_n_value, max_flips, p):
     plt.show()
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(prog = 'randomkcnfsolver', description = "Random KCNF formulas generator and WalkSAT solver implementation")
+    parser = argparse.ArgumentParser(prog = 'python randomkcnfsolver.py', description = "Random KCNF formulas generator and WalkSAT solver implementation")
     parser.add_argument('-o', '--output', default = 'plot', choices = ['plot', 'model'], help = "'plot': Computes random K-CNF(M, N) formulas and displays two plots which relates M/N ratio with P(satisfiable) and WalkSAT runtime; 'model': Computes a single random K-CNF(M, N) formula and returns a model that satisfies it or failure. Defaults to 'plot'.")
     parser.add_argument('-p', default = 0.5, type = float, help = "[--output = 'plot' or --output = 'model'] Probability of going for a 'random walk' in WalkSAT. Defaults to 0.5.")
     parser.add_argument('-f', '--flips', default = 1000, type = int, help = "[--output = 'plot' or --output = 'model'] Maximum number of iterations in WalkSAT. Defaults to 1000.")
